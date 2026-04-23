@@ -141,8 +141,10 @@ def download():
 
 
 if __name__ == "__main__":
-    # Guard: must be run from project root
-    if not os.path.isdir("data/raw"):
+    # Guard: verify we are in the project root by checking for the scripts/ folder.
+    # Do NOT check data/raw here — download() creates it; checking for it first
+    # would block every fresh setup.
+    if not os.path.isdir("scripts"):
         print("ERROR: Run this script from the project root directory.")
         print("  cd 'brain tumor analysis' && python scripts/download_dataset.py")
         sys.exit(1)

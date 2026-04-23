@@ -165,9 +165,13 @@ def compute_dataset_stats(proc_dir: str = PROC_DIR) -> dict | None:
 
 
 if __name__ == "__main__":
+    if not os.path.isdir("scripts"):
+        print("ERROR: Run this script from the project root directory.")
+        print("  cd 'brain tumor analysis' && python scripts/preprocess.py")
+        sys.exit(1)
     if not os.path.isdir(RAW_DIR):
         print(f"ERROR: '{RAW_DIR}' not found.")
-        print("  Run from the project root: python scripts/preprocess.py")
+        print("  Run download_dataset.py first: python scripts/download_dataset.py")
         sys.exit(1)
 
     print("=" * 50)

@@ -223,10 +223,13 @@ def _check_leakage(manifest: dict) -> list[str]:
 # --------------------------------------------------------------------------
 
 if __name__ == "__main__":
+    if not os.path.isdir("scripts"):
+        print("ERROR: Run this script from the project root directory.")
+        print("  cd 'brain tumor analysis' && python scripts/split_dataset.py")
+        sys.exit(1)
     if not os.path.isdir(PROC_DIR):
         print(f"ERROR: '{PROC_DIR}' not found.")
-        print("  Run from the project root: python scripts/split_dataset.py")
-        print("  Ensure preprocess.py and augment.py have been run first.")
+        print("  Run preprocess.py and augment.py first.")
         sys.exit(1)
 
     print("=" * 60)

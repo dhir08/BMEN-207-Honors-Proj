@@ -144,10 +144,13 @@ def augment_all(
 
 
 if __name__ == "__main__":
+    if not os.path.isdir("scripts"):
+        print("ERROR: Run this script from the project root directory.")
+        print("  cd 'brain tumor analysis' && python scripts/augment.py")
+        sys.exit(1)
     if not os.path.isdir(PROC_DIR):
         print(f"ERROR: '{PROC_DIR}' not found.")
-        print("  Run from the project root: python scripts/augment.py")
-        print("  Ensure preprocess.py has been run first.")
+        print("  Run preprocess.py first: python scripts/preprocess.py")
         sys.exit(1)
 
     print("=" * 55)

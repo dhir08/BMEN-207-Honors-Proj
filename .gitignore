@@ -27,7 +27,7 @@ outputs/metrics/
 
 # Jupyter
 .ipynb_checkpoints/
-*.ipynb
+# *.ipynb  # removed: notebook is a required deliverable
 
 # Node / npm build artifacts
 docx_build/

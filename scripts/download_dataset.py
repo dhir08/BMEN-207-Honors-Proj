@@ -141,9 +141,9 @@ def download():
 
 
 if __name__ == "__main__":
-    # Guard: must be run from project root
-    if not os.path.isdir("data/raw"):
+    # Guard: must be run from project root (check for scripts/ which always exists in repo)
+    if not os.path.isdir("scripts"):
         print("ERROR: Run this script from the project root directory.")
-        print("  cd 'brain tumor analysis' && python scripts/download_dataset.py")
+        print("  e.g. from /content/BMEN-207-Honors-Proj in Colab: !python scripts/download_dataset.py")
         sys.exit(1)
     download()

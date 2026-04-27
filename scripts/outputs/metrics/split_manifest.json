@@ -1,0 +1,95 @@
+{
+  "seed": 42,
+  "train_count": 4,
+  "test_count": 4,
+  "n_batches": 2,
+  "batch_size": 2,
+  "classes": {
+    "glioma": {
+      "status": "ok",
+      "train": [
+        "img_007.png",
+        "img_003.png",
+        "img_003_aug1.png",
+        "img_002.png",
+        "img_002_aug1.png",
+        "img_008.png"
+      ],
+      "test_batches": {
+        "batch1": [
+          "img_005.png",
+          "img_006.png"
+        ],
+        "batch2": [
+          "img_009.png",
+          "img_004.png"
+        ]
+      }
+    },
+    "meningioma": {
+      "status": "ok",
+      "train": [
+        "img_003.png",
+        "img_003_aug1.png",
+        "img_005.png",
+        "img_002.png",
+        "img_002_aug1.png",
+        "img_004.png",
+        "img_004_aug1.png"
+      ],
+      "test_batches": {
+        "batch1": [
+          "img_001.png",
+          "img_008.png"
+        ],
+        "batch2": [
+          "img_007.png",
+          "img_000.png"
+        ]
+      }
+    },
+    "no_tumor": {
+      "status": "ok",
+      "train": [
+        "img_007.png",
+        "img_005.png",
+        "img_000.png",
+        "img_000_aug1.png",
+        "img_002.png",
+        "img_002_aug1.png"
+      ],
+      "test_batches": {
+        "batch1": [
+          "img_004.png",
+          "img_009.png"
+        ],
+        "batch2": [
+          "img_001.png",
+          "img_006.png"
+        ]
+      }
+    },
+    "pituitary": {
+      "status": "ok",
+      "train": [
+        "img_007.png",
+        "img_008.png",
+        "img_003.png",
+        "img_003_aug1.png",
+        "img_000.png",
+        "img_000_aug1.png"
+      ],
+      "test_batches": {
+        "batch1": [
+          "img_002.png",
+          "img_009.png"
+        ],
+        "batch2": [
+          "img_001.png",
+          "img_004.png"
+        ]
+      }
+    }
+  },
+  "leakage_detected": false
+}
